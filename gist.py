@@ -17,8 +17,8 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 
 
-client_key = os.environ['GITHUB_OAUTH_KEY']
-client_secret = os.environ['GITHUB_OAUTH_SECRET']
+client_key = os.environ.get('GITHUB_OAUTH_KEY')
+client_secret = os.environ.get('GITHUB_OAUTH_SECRET')
 
 
 #engine = create_engine('sqlite:///foo.db', echo=False)
